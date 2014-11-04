@@ -104,7 +104,7 @@ img.profile {
 }
 .about h2 {
 	text-align: center;
-	color: #383838;;
+	color: #383838;
 }
 .favourites {
 	background-color: #FFEEEE;
@@ -130,12 +130,26 @@ img.profile {
 	vertical-align: middle;
 }
 
+/* Gallery 
+-----------------------------------------*/
+.gallery {
+	text-align: center;
+	background-color:  #FFFFEE;
+}
+.gallery h2 {
+	color: #383838;
+}
+
+.flexWrap {
+	width: 50%;
+	margin: 0 auto;
+}
 
 /* CONTACT 
 -----------------------------------------*/
 .contact {
 	text-align: center;
-	background-color:  #FFFFEE;
+	background-color: #FFEEEE;
 }
 
 .contact h2 {

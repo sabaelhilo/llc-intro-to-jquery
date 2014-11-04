@@ -5,11 +5,13 @@
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/flexslider.css">
 </head>
 <body>
 	<ul class="menu">
 		<li><a href="#about">About</a></li>
 		<li><a href="#favourites">Favourites</a></li>
+		<li><a href="#gallery">Gallery</a></li>
 		<li><a href="#contact">Contact</a></li>
 	</ul>
 
@@ -34,6 +36,20 @@
 		<img class="fav-img" src="images/snow.png">
 	</section>
 
+	<section id="gallery" class="gallery container">
+		<h2>My Gallery</h2>
+		<div class="flexWrap">
+			<div class="flexslider">
+	  		<ul class="slides">
+	    		<li><img src="images/rotator/beach.png"></li>
+	    		<li><img src="images/rotator/bike.png"></li>
+	    		<li><img src="images/rotator/sunset.png"></li>
+	    		<li><img src="images/rotator/trees.png"></li>
+	  		</ul>
+	  	</div>
+</div>
+	</section>
+	
 	<section id="contact" class="contact container">
 		<h2>Contact Me</h2>
 		<a href="https://twitter.com/SabaElHilo"><img src="images/twitter.png"></a>
@@ -43,11 +59,18 @@
 	
 	<!-- jQuery starts here -->
 	<script src="js/jquery-1.11.1.min.js"></script>
+	<!-- Flex slider --> 
+	<script src="js/jquery.flexslider-min.js"></script>
+
 	<script>
 		$(document).ready(function(){
         	$(".favourites .fav-img").click(function(){
         		$(this).hide(10).show('fast');
         	})
+        	$('.flexslider').flexslider({
+        		animation: "slide",
+        		animationSpeed: 2000
+        	});
         });
 
         $(".menu a").click(function(){
