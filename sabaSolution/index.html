@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<title>Page Title</title>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<ul class="menu">
+		<li><a href="#about">About</a></li>
+		<li><a href="#favourites">Favourites</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+
+	<section class="banner">
+		<h1>Saba El-Hilo</h1>
+		<p>Write code and go outside</p>
+	</section>
+
+	<section id="about" class="about container">
+		<h2>About Me</h2>
+		<img class="profile" src="images/profile.jpg">
+		<p>When I'm not writing code, you would probably find me outside running, climbing, snowboarding, cycling or hiking. When I'm inside, I work with all kinds of data. This could include analysis, aggregation or architecting systems to handle the data. This past year my major focus has been on Scala and Apache Spark which is a distributed data processing engine. </p>
+		<p>I recently adopted a plant based diet and I'm always looking for new and exiting recipes to try out. I am a true believer in the importance of eating healthy and the power of food to heal. However, that doesn't mean I don't enjoy the occasional cookie or chocolate bar. Chocolate ice cream is my weekness.</p>
+	</section>
+
+	<section id="favourites" class="favourites container">
+		<h2>What I Live For</h2>
+		<h3>Mountains, running, food and snow!</h3>
+		<img class="fav-img" src="images/mountain.png">
+		<img class="fav-img" src="images/running.png">
+		<img class="fav-img" src="images/food.png">
+		<img class="fav-img" src="images/snow.png">
+	</section>
+
+	<section id="contact" class="contact container">
+		<h2>Contact Me</h2>
+		<a href="https://twitter.com/SabaElHilo"><img src="images/twitter.png"></a>
+		<a href="https://www.facebook.com/saba.elhilo"><img src="images/facebook.png"></a>
+		<a href="https://www.linkedin.com/profile/view?id=118755685&trk=spm_pic"><img src="images/linkedin.png"></a>
+	</section>
+	
+	<!-- jQuery starts here -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+        	$(".favourites .fav-img").click(function(){
+        		$(this).hide(10).show('fast');
+        	})
+        });
+
+        $(".menu a").click(function(){
+        	$(".active").removeClass("active");
+    		$(this).addClass("active");
+		});
+	</script>
+</body>
+</html>
